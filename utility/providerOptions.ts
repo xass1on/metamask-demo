@@ -1,3 +1,5 @@
+'use strict'
+
 import WalletConnect from "@walletconnect/web3-provider";
 
 export const providerOptions = {
@@ -7,4 +9,4 @@ export const providerOptions = {
       infuraId: 'd26f67a11efa4b9f930ebded9b620be9' // required
     }
   }
-};
+}
