@@ -2,21 +2,31 @@
 
 import Head from 'next/head'
 import { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import { Web3Address, Web3Button, MintNft, TransferNft } from '../components'
 
 const Home: NextPage = function () {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+    <div className='container lg mt-10'>
+      <main >
+        <h1 className='text-4xl text-center font-bold'>
           Dapp Demo
         </h1>
-        <h2>
-          In this demo you will connect to blockchain using Metamask/WalletConnect
+        <h2 className='text-2xl text-center leading-looses'>
+          In this demo you will connect to Goerli test network using Metamask/WalletConnect. <br />
+          Make sure to connect to Goerli test network.
         </h2>
-        <h3>
-          To connect, go to the next <a href='walletConnect'>page</a>
-        </h3>
+        <div className='grid grid-cols-3 mt-10'>
+          <div className='content-center'>
+            <Web3Address />
+            <Web3Button />
+          </div>
+          <div>
+            <MintNft />
+          </div>
+          <div>
+            <TransferNft />
+          </div>
+        </div>
       </main>
     </div>
   )
